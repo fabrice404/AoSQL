@@ -1,0 +1,13 @@
+services:
+  psql:
+    container_name: aosql-psql
+    image: postgres:16
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    environment:
+      - POSTGRES_PASSWORD=aosql
+      - POSTGRES_USER=aosql
+      - POSTGRES_DB=santa_workshop
+    restart: unless-stopped
