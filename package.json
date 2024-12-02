@@ -1,0 +1,19 @@
+{
+  "name": "aosql",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prestart": "touch .nodemon.start",
+    "start": "nodemon --ext .sql,.js ./index.js",
+    "lint": "for i in ./challenges/*.sql; do sql-formatter \"$i\" --fix; done",
+    "postinstall": "docker compose up -d"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "nodemon": "^3.1.7",
+    "postgrejs": "^2.22.2",
+    "sql-formatter": "^15.4.6"
+  }
+}

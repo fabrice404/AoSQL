@@ -1,2 +1,4 @@
-*input.sql
 data/*
+import/*
+node_modules/*
+.nodemon.start
